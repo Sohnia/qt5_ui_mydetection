@@ -1,0 +1,9 @@
+Tensorflow>=1.4.0
+Numpy >=1.13.1
+SciPy >=0.19.1
+OpenCV
+Pillow
+Matplotlib
+h5py
+Keras 2.x
+configparser
