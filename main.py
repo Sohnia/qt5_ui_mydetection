@@ -46,6 +46,7 @@ class CoperQt(QtWidgets.QMainWindow,Ui_MainWindow):
                         content += url + "\n\n"
                         content += self.ctl.detect_image(url) + "\n\n\n\n"
                 self.ctl.save_log(content)
+                self.ctl.showMsgbox("结果提示","请到log文件夹下面查看结果！")
         else:
             e.ignore()
 
