@@ -28,6 +28,11 @@ class main_window_ctl():
         self.execution_path = os.getcwd()
         self.conf_file = conf_file = os.path.join(self.execution_path, "Conf\\config.cnf")
 
+        self.check_dir(os.path.join(self.execution_path, 'log'))
+        self.check_dir(os.path.join(self.execution_path, 'model'))
+        self.check_dir(os.path.join(self.execution_path, 'Conf'))
+        # self.check_dir(os.path.join(self.execution_path, 'log'))
+
     def open_image(self):
         """
         打开图片进行物体识别
@@ -142,3 +147,7 @@ class main_window_ctl():
         f.write(content + "\n")
         f.write('-------------*****------------')
         f.close()
+
+    def check_dir(self,dir):
+        if(not os.path.exists(dir)):
+            os.mkdir(dir)
